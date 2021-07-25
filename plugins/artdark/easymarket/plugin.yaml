@@ -1,0 +1,28 @@
+plugin:
+    name: 'artdark.easymarket::lang.plugin.name'
+    description: 'artdark.easymarket::lang.plugin.description'
+    author: 'Artem Dmitrenko'
+    icon: oc-icon-image
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'My clients'
+        url: artdark/easymarket/order
+        icon: icon-bomb
+        sideMenu:
+            side-menu-item:
+                label: 'artdark.easymarket::lang.menu.order'
+                url: artdark/easymarket/order
+                icon: icon-shopping-cart
+            side-menu-item3:
+                label: 'artdark.easymarket::lang.menu.required'
+                url: artdark/easymarket/requireds
+                icon: icon-envelope-o
+            side-menu-item4:
+                label: 'artdark.easymarket::lang.menu.reviews'
+                url: artdark/easymarket/reviews
+                icon: icon-star-half-full
+            side-menu-item2:
+                label: 'artdark.easymarket::lang.menu.settings'
+                url: artdark/easymarket/settings
+                icon: icon-sliders

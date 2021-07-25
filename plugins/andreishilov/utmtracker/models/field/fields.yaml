@@ -1,0 +1,21 @@
+fields:
+  name:
+    label: andreishilov.utmtracker::lang.models.field.fields.name.label
+    type: text
+    span: left
+    required: true
+  code:
+    label: andreishilov.utmtracker::lang.models.field.fields.code.label
+    type: text
+    span: right
+    required: true
+  default_value:
+    label: andreishilov.utmtracker::lang.models.field.fields.default_value.label
+    type: text
+    span: left
+    required: true
+  values:
+    span: full
+    path: field_values
+    type: partial
+    tab: Values

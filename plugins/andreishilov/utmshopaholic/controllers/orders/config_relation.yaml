@@ -1,0 +1,8 @@
+utm:
+  label: UTM
+  view:
+    form: $/andreishilov/utmshopaholic/models/utm/fields.yaml
+    toolbarButtons: update|delete
+  manage:
+    form: $/andreishilov/utmshopaholic/models/utm/fields.yaml
+    list: $/andreishilov/utmshopaholic/models/utm/columns.yaml

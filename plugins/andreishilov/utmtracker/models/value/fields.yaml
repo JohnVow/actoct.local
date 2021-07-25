@@ -1,0 +1,18 @@
+fields:
+  field:
+    label: andreishilov.utmtracker::lang.models.value.fields.field.label
+    nameFrom: name
+    span: left
+    type: relation
+    emptyOption: '-'
+    required: true
+  value:
+    label: andreishilov.utmtracker::lang.models.value.fields.value.label
+    type: text
+    span: right
+    required: true
+  utm_source:
+    label: andreishilov.utmtracker::lang.models.value.fields.utm_source.label
+    type: text
+    span: full
+    required: true

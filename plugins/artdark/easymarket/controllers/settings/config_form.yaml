@@ -1,0 +1,10 @@
+name: Settings
+form: $/artdark/easymarket/models/setting/fields.yaml
+modelClass: ArtDark\EasyMarket\Models\Setting
+defaultRedirect: artdark/easymarket/settings
+create:
+    redirect: 'artdark/easymarket/settings/update/:id'
+    redirectClose: artdark/easymarket/settings
+update:
+    redirect: artdark/easymarket/settings
+    redirectClose: artdark/easymarket/settings

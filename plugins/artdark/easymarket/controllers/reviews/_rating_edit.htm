@@ -1,0 +1,95 @@
+
+<label for='Form-field-Review-<?= $field->fieldName ?>'><?= e(trans('artdark.easymarket::lang.fields.rating')); ?></label>
+<div class="form-group number-field custom-<?= $field->fieldName ?>">
+    <input class="orders form-control" id="Form-field-Review-<?= $field->fieldName ?>" name="Review[<?=  $field->fieldName ?>]" autocomplete="off" type="hidden" value="<?= $value ?>">
+<div class="starings">
+    <div class="revStars stars t-center">
+
+        <div class="star"><i class="icon-star" aria-hidden="true"></i></div>
+        <div class="star"><i class="icon-star" aria-hidden="true"></i></div>
+        <div class="star"><i class="icon-star" aria-hidden="true"></i></div>
+        <div class="star"><i class="icon-star" aria-hidden="true"></i></div>
+        <div class="star"><i class="icon-star" aria-hidden="true"></i></div>
+    </div>
+
+</div>
+</div>
+
+
+
+
+
+
+<script>
+    stars = $('.orders').val();
+
+    $('.stars .star').each(function (i) {
+        if (i < stars) {
+            $(this).addClass('active');
+        }
+
+    });
+
+
+    /* Звезды в отзывах */
+    $(document).on('click', '.stars .star', function() {
+        var count = $(this).length;
+        for(var i=0;i<count;i++){
+            if($(this).hasClass('active')){
+                $(this).nextAll().removeClass('active');
+            } else {
+                $(this).prevAll('div').addClass('active');
+                $(this).addClass('active');
+            }
+        }
+
+    });
+
+
+    //@darkrogua звезды в модальном окне
+   $(document).on('click', '.stars .star', function() {
+        var count = $('.stars .active').length;
+
+        $(".orders").val(count);
+    });
+
+</script>
+
+
+
+<style>
+    .revStars .star {
+        display: inline-block;
+        margin-right: 3px;
+        color: #b5b5b5;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .starings {
+        text-align: left;
+    }
+
+     .starings .stars {
+        bottom: -30px;
+    }
+
+    .starings .stars .star {
+        font-size: 20px;
+    }
+
+    .starings .stars .active {
+        transform: none;
+    }
+
+    .revStars .star.active {
+        color: gold;
+    }
+
+    .starings  {
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-bottom: 15px;
+    }
+
+</style>

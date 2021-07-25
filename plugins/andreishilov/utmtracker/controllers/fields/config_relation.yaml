@@ -1,0 +1,30 @@
+values:
+  label: andreishilov.utmtracker::lang.models.value.name
+  view:
+    list:
+      columns:
+        utm_source:
+          label: andreishilov.utmtracker::lang.models.value.columns.utm_source.label
+          type: text
+          searchable: true
+          sortable: true
+        value:
+          label: andreishilov.utmtracker::lang.models.value.columns.value.label
+          type: text
+          searchable: true
+          sortable: true
+    toolbarButtons: create|remove
+    showSearch: true
+  manage:
+    form:
+      fields:
+        utm_source:
+          label: andreishilov.utmtracker::lang.models.value.fields.utm_source.label
+          type: text
+          span: left
+          required: true
+        value:
+          label: andreishilov.utmtracker::lang.models.value.fields.value.label
+          type: text
+          span: right
+          required: true

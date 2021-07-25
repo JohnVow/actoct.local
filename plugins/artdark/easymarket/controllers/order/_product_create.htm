@@ -1,0 +1,40 @@
+<?php
+
+$name =  e(trans('artdark.easymarket::lang.order.product'));
+
+ echo "
+	<label for='Form-field-Order-name'>$name</label>
+       <select id='Form-field-Order-name' name='Order[product_id]' class='form-control custom-select'
+    ></select>";
+
+?>
+
+<script type="text/javascript">
+    $('#Form-field-Order-name').select2({
+        minimumInputLength: 1,
+        placeholder: 'Select a product',
+        ajax: {
+            transport: function(params, success, failure) {
+                var $request = $.request('onGetProductName', {
+                    data: params.data
+                });
+
+                $request.done(success)
+                $request.fail(failure)
+                return $request
+            },
+            dataType: 'json',
+            delay: 250,
+            processResults: function (data, params) {
+                console.log(data.result);
+                return {
+                    results: JSON.parse(data.result)
+                };
+            },
+            
+        },
+
+
+    });
+</script>
+

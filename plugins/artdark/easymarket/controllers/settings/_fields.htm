@@ -1,0 +1,201 @@
+<label for='Form-field-Setting-<?= $field->fieldName ?>-group'><?= e(trans('artdark.easymarket::lang.settings.fiels_name')); ?></label>
+
+<div class="form-group checkboxlist-field artdark-list custom-<?= $field->fieldName ?>">
+    <input type="hidden" name="Setting[<?= $field->fieldName ?>]" value="0">
+
+    <!-- Switcher -->
+    <div class="form-group switch-field span-right">
+        <div class="field-switch">
+            <label><?= e(trans('artdark.easymarket::lang.settings.required')); ?></label>
+        </div>
+        <label class="custom-switch">
+            <input type="checkbox" name='Setting[<?=  $field->fieldName ?>][0][required]' autocomplete="off" value="1"/
+            <?php
+            $this->onCheck($value, 0, 'name', 1);
+            ?>
+            >
+            <span><span>On</span><span>Off</span></span>
+            <a class="slide-button"></a>
+        </label>
+    </div>
+    <div class="checkbox custom-checkbox">
+        <input id="checkbox-<?= $field->fieldName ?>-fields-name" name='Setting[<?=  $field->fieldName ?>][0][value]' value="name" type="checkbox"
+
+        <?php
+            $this->onCheck($value, 0, 'name');
+        ?>
+        >
+        <label class="choice" for="checkbox-<?= $field->fieldName ?>-fields-name"><?= e(trans('artdark.easymarket::lang.fields.name')); ?></label>
+    </div>
+
+    <!-- Switcher -->
+    <div class="form-group switch-field span-right">
+        <div class="field-switch">
+            <label><?= e(trans('artdark.easymarket::lang.settings.required')); ?></label>
+        </div>
+        <label class="custom-switch">
+            <input type="checkbox" name='Setting[<?=  $field->fieldName ?>][1][required]' autocomplete="off" value="1"/
+            <?php
+            $this->onCheck($value, 1, 'phone', 1);
+            ?>>
+            <span><span>On</span><span>Off</span></span>
+            <a class="slide-button"></a>
+        </label>
+    </div>
+    <div class="checkbox custom-checkbox">
+        <input id="checkbox-fields-<?= $field->fieldName ?>-phone" name='Setting[<?=  $field->fieldName ?>][1][value]'  value="phone" type="checkbox"
+        <?php
+            $this->onCheck($value, 1, 'phone');
+        ?>
+        >
+        <label class="choice" for="checkbox-fields-<?= $field->fieldName ?>-phone"><?= e(trans('artdark.easymarket::lang.fields.phone')); ?></label>
+    </div>
+
+    <!-- Switcher -->
+    <div class="form-group switch-field span-right">
+        <div class="field-switch">
+            <label><?= e(trans('artdark.easymarket::lang.settings.required')); ?></label>
+        </div>
+        <label class="custom-switch">
+            <input type="checkbox" name='Setting[<?=  $field->fieldName ?>][2][required]' autocomplete="off" value="1"/
+            <?php
+            $this->onCheck($value, 2, 'email', 1);
+            ?>
+            >
+            <span><span>On</span><span>Off</span></span>
+            <a class="slide-button"></a>
+        </label>
+    </div>
+    <div class="checkbox custom-checkbox">
+        <input id="checkbox-fields-<?= $field->fieldName ?>-email" name='Setting[<?=  $field->fieldName ?>][2][value]'  value="email" type="checkbox"
+        <?php
+            $this->onCheck($value, 2, 'email');
+        ?>
+        >
+        <label class="choice" for="checkbox-fields-<?= $field->fieldName ?>-email"><?= e(trans('artdark.easymarket::lang.fields.email')); ?></label>
+    </div>
+
+
+    <!-- Switcher -->
+    <div class="form-group switch-field span-right">
+        <div class="field-switch">
+            <label><?= e(trans('artdark.easymarket::lang.settings.required')); ?></label>
+        </div>
+        <label class="custom-switch">
+            <input type="checkbox" name='Setting[<?=  $field->fieldName ?>][3][required]' autocomplete="off" value="1"/
+            <?php
+            $this->onCheck($value, 3, 'message', 1);
+            ?>
+            >
+            <span><span>On</span><span>Off</span></span>
+            <a class="slide-button"></a>
+        </label>
+    </div>
+    <div class="checkbox custom-checkbox">
+        <input id="checkbox-fields-<?= $field->fieldName ?>-message" name='Setting[<?=  $field->fieldName ?>][3][value]'  value="message" type="checkbox"
+        <?php
+            $this->onCheck($value, 3, 'message');
+        ?>
+        >
+        <label class="choice" for="checkbox-fields-<?= $field->fieldName ?>-message"><?= e(trans('artdark.easymarket::lang.fields.message')); ?></label>
+    </div>
+
+
+
+    <!-- Switcher -->
+    <div class="form-group switch-field span-right">
+        <div class="field-switch">
+            <label><?= e(trans('artdark.easymarket::lang.settings.required')); ?></label>
+        </div>
+        <label class="custom-switch">
+            <input type="checkbox" name='Setting[<?=  $field->fieldName ?>][4][required]' autocomplete="off" value="1"/
+            <?php
+            $this->onCheck($value, 4, 'accepted', 1);
+            ?>>
+            <span><span>On</span><span>Off</span></span>
+            <a class="slide-button"></a>
+        </label>
+    </div>
+    <div class="checkbox custom-checkbox">
+        <input id="checkbox-fields-<?= $field->fieldName ?>-accepted" name='Setting[<?=  $field->fieldName ?>][4][value]'  value="accepted" type="checkbox"
+        <?php
+            $this->onCheck($value, 4, 'accepted');
+        ?>
+        >
+        <label class="choice" for="checkbox-fields-<?= $field->fieldName ?>-accepted"><?= e(trans('artdark.easymarket::lang.fields.accepted')); ?></label>
+    </div>
+
+
+
+</div>
+
+<script>
+    var c_class  = ".custom-<?= $field->fieldName ?>";
+
+    /* добавляю атребуты чтобы связать переключатели*/
+    $('.artdark-list .checkbox input').each(function (i) {
+        $(this).attr('item', i);
+    });
+
+    $('.artdark-list .switch-field').each(function (i) {
+        $(this).attr('item', i);
+    });
+
+
+    /* при нажатии на переключатель */
+    $('.artdark-list input').on('change', function(){
+        class_check = $(this).attr('item');
+        if($(this).prop('checked')){
+           $('.artdark-list .switch-field[item=' + class_check+']').fadeIn();
+        }else{
+            $('.artdark-list .switch-field[item=' + class_check+']').fadeOut();
+        }
+    });
+
+    window.onload = function() {
+        $('.artdark-list .custom-checkbox input').each(function(i) {
+            class_check = $(this).attr('item');
+            if($(this).prop('checked')){
+                $('.artdark-list .switch-field[item=' + class_check+']').fadeIn();
+            }else{
+                $('.artdark-list .switch-field[item=' + class_check+']').fadeOut();
+            }
+        });
+    };
+
+
+
+
+
+
+</script>
+
+<style>
+    .artdark-list .custom-switch > span {
+        height: 75%;
+    }
+
+    .artdark-list .custom-switch .slide-button {
+        width: 15px;
+        height: 15px;
+        right: 35px;
+    }
+
+    .artdark-list .custom-switch > span span {
+        top: 0;
+    }
+
+    .artdark-list .custom-switch > span span:last-child {
+        left: 24px;
+    }
+
+    .artdark-list .custom-switch {
+        width: 55px;
+    }
+
+    .artdark-list .form-group {
+        padding-bottom: 0;
+        display: none;
+    }
+
+</style>

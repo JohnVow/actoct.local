@@ -1,0 +1,15 @@
+columns:
+    id:
+        label: id
+        type: number
+        searchable: false
+        sortable: true
+    name:
+        label: 'artdark.easymarket::lang.settings.name'
+        type: text
+        searchable: true
+        sortable: true
+    active:
+        label: 'artdark.easymarket::lang.settings.active'
+        type: partial
+        sortable: true

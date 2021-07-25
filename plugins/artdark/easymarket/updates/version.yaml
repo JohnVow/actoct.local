@@ -1,0 +1,13 @@
+2018.10.1:
+    - 'First version plugin'
+    - builder_table_create_artdark_easymarket_orders.php
+    - builder_table_create_artdark_easymarket_settings.php
+    - builder_table_create_artdark_easymarket_requireds.php
+    - builder_table_create_artdark_easymarket_reviews.php
+2018.10.2:
+    - 'Fix bug validator'
+2018.10.6:
+    - 'Fix bug seeder settings'
+    -  plugin_seeder.php
+
+

@@ -1,0 +1,10 @@
+name: Order
+form: $/artdark/easymarket/models/order/fields.yaml
+modelClass: ArtDark\EasyMarket\Models\Order
+defaultRedirect: artdark/easymarket/order
+create:
+    redirect: 'artdark/easymarket/order/update/:id'
+    redirectClose: artdark/easymarket/order
+update:
+    redirect: artdark/easymarket/order
+    redirectClose: artdark/easymarket/order

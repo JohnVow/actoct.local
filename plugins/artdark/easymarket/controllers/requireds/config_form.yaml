@@ -1,0 +1,10 @@
+name: Requireds
+form: $/artdark/easymarket/models/required/fields.yaml
+modelClass: ArtDark\EasyMarket\Models\Required
+defaultRedirect: artdark/easymarket/requireds
+create:
+    redirect: 'artdark/easymarket/requireds/update/:id'
+    redirectClose: artdark/easymarket/requireds
+update:
+    redirect: artdark/easymarket/requireds
+    redirectClose: artdark/easymarket/requireds

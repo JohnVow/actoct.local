@@ -1,0 +1,7 @@
+{% if __SELF__.type != 'order' %}
+    <button href="#modal" class="cbtn cback" data-request="onSend"
+            data-request-data="type:'{{__SELF__.type}}'">{{ ('artdark.easymarket::lang.'~__SELF__.type~'.button')|trans }}</button>
+{% else %}
+    <button itemid="{{__SELF__.properties.item_id}}" href="#modal" class="cbtn cback" data-request="onSend"
+            data-request-data="itemid:'{{__SELF__.properties.item_id}}', type:'{{__SELF__.type}}'">{{ ('artdark.easymarket::lang.'~__SELF__.type~'.button')|trans }}</button>
+{% endif %}

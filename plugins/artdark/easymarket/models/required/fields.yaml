@@ -1,0 +1,43 @@
+fields:
+    active:
+        label: 'artdark.easymarket::lang.required.active'
+        span: auto
+        type: switch
+        tab: 'artdark.easymarket::lang.required.name'
+        comment: 'artdark.easymarket::lang.required.comments.active'
+    created_at:
+        label: 'artdark.easymarket::lang.required.date_created'
+        mode: datetime
+        span: auto
+        disabled: 1
+        type: datepicker
+        tab: 'artdark.easymarket::lang.required.name'
+        comment: 'artdark.easymarket::lang.required.comments.created_at'
+tabs:
+    fields:
+        name:
+            label: 'artdark.easymarket::lang.fields.name'
+            span: left
+            type: text
+            tab: 'artdark.easymarket::lang.required.name'
+        email:
+            label: 'artdark.easymarket::lang.fields.email'
+            span: right
+            type: text
+            tab: 'artdark.easymarket::lang.required.name'
+        phone:
+            label: 'artdark.easymarket::lang.fields.phone'
+            span: left
+            type: text
+            tab: 'artdark.easymarket::lang.required.name'
+        ip:
+            label: ip
+            span: right
+            type: text
+            tab: 'artdark.easymarket::lang.required.name'
+        message:
+            label: 'artdark.easymarket::lang.fields.message'
+            size: large
+            span: full
+            type: textarea
+            tab: 'artdark.easymarket::lang.required.name'

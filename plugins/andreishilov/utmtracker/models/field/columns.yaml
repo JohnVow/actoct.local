@@ -1,0 +1,11 @@
+columns:
+  name:
+    label: andreishilov.utmtracker::lang.models.field.columns.name.label
+    type: text
+    sortable: true
+    searchable: true
+  code:
+    label: andreishilov.utmtracker::lang.models.field.columns.code.label
+    type: text
+    sortable: true
+    searchable: true

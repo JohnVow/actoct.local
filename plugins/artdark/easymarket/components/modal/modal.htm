@@ -1,0 +1,138 @@
+{% set fields = null %}
+{% set rating = false  %}
+
+{% if type == 'order' %}
+    {% set fields = setting.fields_orders %}
+{% elseif type == 'required' %}
+    {% set fields = setting.fields_required %}
+{% elseif type == 'reviews' %}
+    {% set fields = setting.fields_review %}
+    {% if setting.review_rating %}
+        {% set rating = true  %}
+    {% endif %}
+{% endif %}
+<div class="modal">
+<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+<div class="form-field-modal">
+	<div class="head">
+	{{ ('artdark.easymarket::lang.'~type~'.modal_title')|trans }}
+   
+	</div>
+
+
+
+{% if fields|length > 0 %}
+{% set required = '' %}
+{% if rating %}
+{% set star_svg = '<svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>'%}
+<div class="starings">
+    <div class="revStars stars t-center">
+        <div class="star">{{star_svg|raw}}</div>
+        <div class="star">{{star_svg|raw}}</div>
+        <div class="star">{{star_svg|raw}}</div>
+        <div class="star">{{star_svg|raw}}</div>
+        <div class="star">{{star_svg|raw}}</div>
+        <span style="color: red">*</span>
+
+
+    </div>
+    <input class="order" id="stars" name="rating" type="hidden">
+</div>
+{% endif %}
+{% for field in fields %}
+
+{% if field.value == 'name' %}
+<div class="fline">
+    <input class="order" name="{{ field.value }}" type="text">
+    <div>{{ 'artdark.easymarket::lang.fields.name'|trans }}{% if field.required %}{% set required = required~field.value~',' %} <span style="color: red">*</span>{% endif %}</div>
+</div>
+{% elseif field.value == 'phone' %}
+<div class="fline">
+    <input id="phone" class="order" name="{{ field.value }}" type="text">
+    <div>{{ 'artdark.easymarket::lang.fields.phone'|trans }} {% if field.required %}{% set required = required~field.value~',' %}<span style="color: red">*</span>{% endif %}</div>
+</div>
+{% elseif field.value == 'email' %}
+<div class="fline">
+    <input  class="order" name="{{ field.value }}" type="text">
+    <div>{{ 'artdark.easymarket::lang.fields.email'|trans }} {% if field.required %}{% set required = required~field.value~',' %}<span style="color: red">*</span>{% endif %}</div>
+</div>
+{% elseif field.value == 'message' %}
+<div class="fline">
+    {% if field.required %}{% set required = required~field.value~',' %}{% endif %}
+    <textarea class="order" name="{{ field.value }}" 
+    placeholder="{{ ('artdark.easymarket::lang.'~type~'.message_placeholder')|trans }}"
+    ></textarea>
+</div>
+{% elseif field.value == 'accepted' %}
+<div class="field t-left" style="font-size: 14px;">
+    {% if field.required %}{% set required = required~field.value~',' %}{% endif %}
+    <input id="personalz" class="order" type="checkbox" name="{{ field.value }}" value="0" >
+    {{ 'artdark.easymarket::lang.fields.accepted_message'|trans }}
+    {% if setting.text_link|length > 0 %}
+        {% if setting.accept_link|length > 0 %}
+        <a href="{{setting.accept_link}}" target="_blank">
+            "{{setting.text_link}}"
+        </a>
+        {% else %}
+        {{setting.text_link}}
+        {% endif %}
+    {% endif %}
+    <br>
+</div>
+{% endif %}
+
+{% endfor %}
+
+<input class="order" name="required" type="hidden" value="{{ required|slice(0,-1) }}">
+{% endif %}
+
+<input class="order" name="type" type="hidden" value="{{ type }}">
+{% if itemid %}
+    <input class="order" name="itemid" type="hidden" value="{{ itemid }}">
+{% endif %}
+
+<div class="fline">
+    <button ion="data=.order;ajax=/send/send;prepend=#SystemMessages;preloader=#Preloader;beforeajax=hideForm();" 
+    class="cbtn">{{ ('artdark.easymarket::lang.'~type~'.modal_button')|trans }}</button>
+</div>
+</div>
+<div id="Preloader" complite="true" style="display: none;">
+    <img src="{{ ('/plugins/artdark/easymarket/assets/img/preloader.gif')|app }}" alt="preloader">
+</div>
+<div class="modal-done" style="display: none;">
+    <span>Спасибо катаны</span>
+    <div class="done-animate">
+        <img src="{{ ('/plugins/artdark/easymarket/assets/img/send.gif')|app }}" alt="send_message">
+    </div>
+</div>
+
+</div>
+
+<script>
+    //Согласие в модальном окне, заказать
+    $('#personalz').on('click', function() {
+        if ($('#personalz[value]').val() == '0') {
+            $('#personalz[value]').val('1');
+        } else {
+            $('#personalz[value]').val('0');
+        }
+    });
+
+    function hideForm() {
+        var timeOut = 700;
+        setTimeout(function ()
+        {
+            if ($('#Preloader').attr("complite") === "false") {
+                $('.modalWrap .form-field-modal').css('display', 'none');
+            }
+        }, timeOut);
+
+    }
+
+    function showDone(text) {
+        $('.modalWrap .modal-done span').text(text);
+        $('.modalWrap .form-field-modal').css('display', 'none');
+        $('.modalWrap .modal-done').css('display', 'block');
+
+    }
+</script>

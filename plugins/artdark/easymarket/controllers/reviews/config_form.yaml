@@ -1,0 +1,10 @@
+name: Reviews
+form: $/artdark/easymarket/models/review/fields.yaml
+modelClass: ArtDark\EasyMarket\Models\Review
+defaultRedirect: artdark/easymarket/reviews
+create:
+    redirect: 'artdark/easymarket/reviews/update/:id'
+    redirectClose: artdark/easymarket/reviews
+update:
+    redirect: artdark/easymarket/reviews
+    redirectClose: artdark/easymarket/reviews

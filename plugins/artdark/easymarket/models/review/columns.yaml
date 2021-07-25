@@ -1,0 +1,46 @@
+columns:
+    id:
+        label: id
+        type: number
+        searchable: true
+        sortable: true
+    name:
+        label: 'artdark.easymarket::lang.fields.name'
+        type: text
+        searchable: true
+        sortable: true
+    rating:
+        label: 'artdark.easymarket::lang.fields.rating'
+        type: partial
+        searchable: false
+        sortable: true
+    email:
+        label: 'artdark.easymarket::lang.fields.email'
+        type: text
+        searchable: true
+        sortable: true
+    phone:
+        label: 'artdark.easymarket::lang.fields.phone'
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'artdark.easymarket::lang.reviews.date_created'
+        type: datetime
+        searchable: true
+        sortable: true
+    ip:
+        label: 'ip '
+        type: text
+        searchable: true
+        invisible: true
+        sortable: true
+    answer_active:
+        label: 'artdark.easymarket::lang.reviews.answer_name'
+        type: partial
+        sortable: true
+    active:
+        label: 'artdark.easymarket::lang.reviews.active'
+        type: partial
+        searchable: false
+        sortable: true

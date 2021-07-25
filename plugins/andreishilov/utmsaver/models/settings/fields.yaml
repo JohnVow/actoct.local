@@ -1,0 +1,7 @@
+fields:
+    cookie_ttl:
+        label: andreishilov.utmsaver::lang.config.cookie_ttl.title
+        comment: andreishilov.utmsaver::lang.config.cookie_ttl.description
+        span: left
+        type: number
+        default: 30

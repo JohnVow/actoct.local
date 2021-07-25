@@ -1,0 +1,166 @@
+#modal {
+    font-family: OpenSansRegular, sans-serif;
+}
+.hidden {
+    display: none;
+}
+
+#wrapperButton {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.cbtn {
+    font-size: 16px;
+    font-family: GilroyExtraBold, sans-serif;
+    color: #fff;
+    background-color: #dc2537;
+    padding: 12px 0;
+    width: 100%;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+    border: none;
+}
+
+.t-left {
+    text-align: left;
+}
+
+#modal button {
+    outline: none;
+    border: none;
+    cursor: pointer; 
+}
+
+#Preloader img {
+    width: 100%;
+}
+
+.starings {
+  text-align: center;
+}
+
+#modal .starings .stars {
+  bottom: -30px;
+  display: inline-block;
+  display: -webkit-inline-box;
+}
+
+#modal .starings .stars .star {
+  font-size: 20px;
+  width: 25px;
+  color: #cacaca;
+}
+
+#modal .starings .stars .active {
+  transform: none;
+  color: gold;
+}
+
+#modal .starings {
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+
+
+.fline button {
+      background-color: #042665;
+}
+.cbtn {
+    font-size: 16px;
+    color: #fff;
+    font-family: GilroyExtraBold, sans-serif;
+    padding: 15px 40px;
+    transition: all .2s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.mfp-wrap ~ *:not(#SystemMessagesWrapper) {
+    filter: blur(3px)
+}
+.modalFade {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+.modalWrap {
+    display: inline-block;
+    width: 520px;
+    padding: 50px 80px;
+    position: relative;
+    border: 2px solid #c7c7c7;
+    background-color: #fff
+}
+.modal .head {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-family: GilroyExtraBold, sans-serif;
+    color: #00295f;
+    margin-bottom: 30px
+}
+.modal .fline {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding: 12px 0
+}
+.modal .fline input {
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #d7d7d7;
+    z-index: 2;
+    padding: 5px 0;
+    position: relative;
+    background-color: transparent
+}
+.modal .fline input:focus {
+    border-bottom: 1px solid #dc2537
+}
+.modal .fline textarea {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #d7d7d7;
+    min-height: 140px;
+    padding: 10px
+}
+.modal .fline textarea[placeholder] {
+    font-size: 12px;
+    font-family: OpenSansRegular, sans-serif;
+    color: #000
+}
+.modal .fline div {
+    position: absolute;
+    bottom: 22px;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all .1s ease-in-out
+}
+.modal .fline input[placeholder] {
+    transition: all .1s ease-in-out
+}
+.modal .fline div.active {
+    font-size: 10px;
+    transform: translateY(-20px)
+}
+.fline .cbtn {
+    background-color: #042665
+}
+.fline .cbtn:hover {
+    background-color: #0D3888
+}
+.modal > div:last-child {
+    padding-bottom: 0
+}

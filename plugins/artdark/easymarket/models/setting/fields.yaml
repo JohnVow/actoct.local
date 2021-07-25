@@ -1,0 +1,198 @@
+fields:
+    active:
+        label: 'artdark.easymarket::lang.settings.active'
+        span: full
+        default: 1
+        type: switch
+        comment: 'artdark.easymarket::lang.settings.comments.active'
+    name: 
+        label: 'artdark.easymarket::lang.settings.name'
+        span: left
+        default: Default
+        required: 1
+        type: text
+        comment: 'artdark.easymarket::lang.settings.comments.name'
+    created_at:
+        label: 'artdark.easymarket::lang.settings.create_date'
+        mode: datetime
+        span: auto
+        disabled: 1
+        type: datepicker
+        comment: 'artdark.easymarket::lang.settings.comments.create_at'
+    currency:
+        label: 'artdark.easymarket::lang.settings.currency'
+        span: auto
+        default: USD
+        required: 1
+        type: text
+        comment: 'artdark.easymarket::lang.settings.comments.currency'
+    shop_name:
+        label: 'artdark.easymarket::lang.settings.name_shop'
+        span: right
+        default: EasyMarket
+        required: 1
+        type: text
+        comment: 'artdark.easymarket::lang.settings.comments.shop_name'
+    time_reshipment:
+        label: 'artdark.easymarket::lang.settings.time_reshipment'
+        span: auto
+        default: '60'
+        type: number
+        comment: 'artdark.easymarket::lang.settings.comments.time_reshipment'
+    logos:
+        label: 'artdark.easymarket::lang.settings.logo'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload
+        comment: 'artdark.easymarket::lang.settings.comments.logos'
+    footer_social:
+        label: 'artdark.easymarket::lang.settings.footer_social'
+        prompt: +
+        span: full
+        type: repeater
+        comment: 'artdark.easymarket::lang.settings.comments.footer_social'
+        form:
+            fields:
+                link:
+                    label: 'artdark.easymarket::lang.settings.link-social'
+                    span: auto
+                    type: text
+                image:
+                    label: 'artdark.easymarket::lang.settings.social.icon'
+                    mode: image
+                    span: auto
+                    type: mediafinder
+    section1:
+        label: 'artdark.easymarket::lang.fields.accepted'
+        span: full
+        type: section
+        comment: 'artdark.easymarket::lang.settings.comments.section1'
+    text_link:
+        label: 'artdark.easymarket::lang.settings.text-link'
+        span: left
+        type: text
+    accept_link:
+        label: 'artdark.easymarket::lang.settings.fields_link'
+        span: right
+        type: text
+tabs:
+    fields:
+        fields_orders:
+            span: right
+            path: fields
+            type: partial
+            tab: 'artdark.easymarket::lang.settings.form-name'
+        s_order_user:
+            label: 'artdark.easymarket::lang.settings.s_order_user'
+            span: left
+            default: 1
+            type: switch
+            tab: 'artdark.easymarket::lang.settings.form-name'
+            comment: 'artdark.easymarket::lang.settings.comments.s_order_user'
+        s_order_admin:
+            label: 'artdark.easymarket::lang.settings.s_order_admin'
+            span: left
+            default: 1
+            type: switch
+            tab: 'artdark.easymarket::lang.settings.form-name'
+            comment: 'artdark.easymarket::lang.settings.comments.s_order_admin'
+        s_order_admin_emails:
+            label: 'artdark.easymarket::lang.settings.order_admin_emails'
+            prompt: +
+            span: left
+            trigger:
+                action: show
+                field: s_order_admin
+                condition: checked
+            type: repeater
+            comment: 'artdark.easymarket::lang.settings.comments.email'
+            tab: 'artdark.easymarket::lang.settings.form-name'
+            form:
+                fields:
+                    Email:
+                        label: email
+                        span: full
+                        type: text
+        fields_required:
+            span: right
+            path: fields
+            type: partial
+            tab: 'artdark.easymarket::lang.settings.form-request'
+        s_required_user:
+            label: 'artdark.easymarket::lang.settings.s_order_user'
+            span: left
+            default: 1
+            type: switch
+            tab: 'artdark.easymarket::lang.settings.form-request'
+            comment: 'artdark.easymarket::lang.settings.comments.s_order_user'
+        s_required_admin:
+            label: 'artdark.easymarket::lang.settings.s_order_admin'
+            span: left
+            default: 1
+            type: switch
+            tab: 'artdark.easymarket::lang.settings.form-request'
+            comment: 'artdark.easymarket::lang.settings.comments.s_order_admin'
+        s_required_admin_emails:
+            label: 'artdark.easymarket::lang.settings.order_admin_emails'
+            prompt: +
+            span: left
+            trigger:
+                action: show
+                field: s_required_admin
+                condition: checked
+            type: repeater
+            comment: 'artdark.easymarket::lang.settings.comments.email'
+            tab: 'artdark.easymarket::lang.settings.form-request'
+            form:
+                fields:
+                    Email:
+                        label: email
+                        span: full
+                        type: text
+        review_rating:
+            label: 'artdark.easymarket::lang.settings.review_rating'
+            span: left
+            default: 1
+            type: switch
+            tab: 'artdark.easymarket::lang.settings.review-form'
+            comment: 'artdark.easymarket::lang.settings.comments.review_rating'
+        fields_review:
+            span: right
+            path: fields
+            type: partial
+            tab: 'artdark.easymarket::lang.settings.review-form'
+        s_review_user:
+            label: 'artdark.easymarket::lang.settings.s_order_user'
+            span: left
+            default: 1
+            type: switch
+            tab: 'artdark.easymarket::lang.settings.review-form'
+            comment: 'artdark.easymarket::lang.settings.comments.s_order_user'
+        s_review_admin:
+            label: 'artdark.easymarket::lang.settings.s_order_admin'
+            span: left
+            default: 1
+            type: switch
+            tab: 'artdark.easymarket::lang.settings.review-form'
+            comment: 'artdark.easymarket::lang.settings.comments.s_order_admin'
+        s_review_admin_emails:
+            label: 'artdark.easymarket::lang.settings.order_admin_emails'
+            prompt: +
+            span: left
+            trigger:
+                action: show
+                field: s_review_admin
+                condition: checked
+            type: repeater
+            comment: 'artdark.easymarket::lang.settings.comments.email'
+            tab: 'artdark.easymarket::lang.settings.review-form'
+            form:
+                fields:
+                    Email:
+                        label: email
+                        span: full
+                        type: text

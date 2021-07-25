@@ -1,0 +1,16 @@
+<div class="report-widget">
+    <h3><?= Lang::get('andreishilov.utmshopaholic::lang.reportwidget.sourcesoforders.name') ?></h3>
+    <div class="control-chart" data-control="chart-pie" data-size="200" data-center-text="<?php echo $data['total']?>">
+        <ul>
+            <?php foreach($data['items'] as $item) {?>
+            <li><?php echo $item['utm_source']?>
+                <span><?php echo $item['amount']?></span></li>
+            <?php } ?>
+        </ul>
+    </div>
+
+    <p class="report-description">
+        <?= Lang::get('andreishilov.utmshopaholic::lang.reportwidget.sourcesoforders.parameters.days') ?>
+        : <?php echo $days?>
+    </p>
+</div>

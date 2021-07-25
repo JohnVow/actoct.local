@@ -1,0 +1,21 @@
+fields:
+  utm_source:
+    label: UTM Source
+    span: full
+    type: text
+  utm_campaign:
+    label: UTM Campaign
+    span: full
+    type: text
+  utm_medium:
+    label: UTM Medium
+    span: full
+    type: text
+  utm_term:
+    label: UTM Term
+    span: full
+    type: text
+  utm_content:
+    label: UTM Content
+    span: full
+    type: text

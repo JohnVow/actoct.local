@@ -1,0 +1,21 @@
+columns:
+  utm_source:
+    label: UTM Source
+    type: text
+    searchable: true
+  utm_campaign:
+    label: UTM Campaign
+    type: text
+    searchable: true
+  utm_medium:
+    label: UTM Medium
+    type: text
+    searchable: true
+  utm_term:
+    label: UTM Term
+    type: text
+    searchable: true
+  utm_content:
+    label: UTM Content
+    type: text
+    searchable: true

@@ -1,0 +1,12 @@
+list: $/andreishilov/utmtracker/models/field/columns.yaml
+modelClass: AndreiShilov\UTMTracker\Models\Field
+title: andreishilov.utmtracker::lang.models.field.name
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'andreishilov/utmtracker/fields/update/:id'

@@ -1,0 +1,16 @@
+columns:
+  field:
+    label: andreishilov.utmtracker::lang.models.value.columns.field.label
+    sortable: true
+    select: name
+    relation: field
+  utm_source:
+    label: andreishilov.utmtracker::lang.models.value.columns.utm_source.label
+    type: text
+    searchable: true
+    sortable: true
+  value:
+    label: andreishilov.utmtracker::lang.models.value.columns.value.label
+    type: text
+    searchable: true
+    sortable: true

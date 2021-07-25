@@ -1,0 +1,10 @@
+name: andreishilov.utmtracker::lang.models.field.name
+form: $/andreishilov/utmtracker/models/field/fields.yaml
+modelClass: AndreiShilov\UTMTracker\Models\Field
+defaultRedirect: andreishilov/utmtracker/fields
+create:
+    redirect: 'andreishilov/utmtracker/fields/update/:id'
+    redirectClose: andreishilov/utmtracker/fields
+update:
+    redirect: andreishilov/utmtracker/fields
+    redirectClose: andreishilov/utmtracker/fields
