@@ -13,3 +13,16 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+    -
+        title: About
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: about
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
